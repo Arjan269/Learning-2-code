@@ -1,0 +1,80 @@
+/* default position: static => Elements render in order, as they appear in the document flow*/
+.parent {
+    position: relative;
+    height: 2000px;
+}
+
+/* 
+2. relative : When you set an element's position to relative, you can use the top, bottom, left, or right properties to move the element relative to its normal position. Other elements on the page still occupy their original space, and the moved element may overlap or leave a gap depending on the direction of movement.
+*/
+.child-one {
+    /* position: relative; */
+    /* top: 100px; */
+    /* left: 100px; */
+}
+
+/* 3. absolute: Parent has to be not static, else it considers the main html element as the parent. Absolute positioning removes the element from the normal flow of the document,
+so it can overlap other elements.*/
+.child-two {
+    /* position: absolute; */
+    /* top: 0; */
+    /* left:100px; */
+}
+
+/* 4. fixed : Fixed to a place. Doesn't care about the parent. Always considers html element as the parent. They do not move when the page is scrolled.  This is often used for elements like navigation bars or headers that you want to stay visible at all times. */
+.child-three {
+    /* position: fixed; */
+    /* top: 0; */
+    /* left:200px; */
+
+}
+
+/* 5. sticky: Sticky positioning is a hybrid of relative and fixed positioning. An element with position: sticky, behaves like position: relative, until it reaches a specified scroll position,after which it becomes position: fixed,and sticks to a designated position in the viewport. This is commonly used for creating sticky headers or sidebars in web designs. */
+.child-four {
+    /* position: sticky; */
+    /* top: 100px; */
+    /* z-index: 2; */
+}
+
+/* 6.z-index: 
+The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.
+❗Note: z-index only works on positioned elements (absolute, relative, fixed, sticky) and 
+        flex items (elements that are direct children of display:flex elements).*/
+
+
+.child-five {
+    /* position: relative; */
+    /* z-index: 1; */
+}
+
+/* color styles */
+.parent {
+    background-color: #0fa8f9;
+    border: #094261 10px solid;
+}
+
+.child-one {
+    background-color: #76fe77;
+    border: #58bc58 5px solid;
+}
+
+.child-two {
+    background-color: #f37674;
+    border: #a95150 5px solid;
+}
+
+.child-three {
+    background-color: #f576e7;
+    border: #9a5193 5px solid;
+}
+
+.child-four {
+    background-color: #f5bc76;
+    border: #96744b 5px solid;
+}
+
+.child-five {
+    background-color: #f2f7a1;
+    border: #979d2f 5px solid;
+}
+ 

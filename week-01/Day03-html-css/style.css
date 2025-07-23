@@ -1,0 +1,42 @@
+/* increases the size of h1 */
+h1 { 
+    font-size: 90px;
+    font-weight: 200;
+}
+
+/* praagrah editing */
+p {
+    font-size: 22px;
+    border: dotted 6px rgb(42, 152, 216);
+    color: purple;
+}
+
+/* Selecting using id */
+#title {
+    font-family: "tahoma", sans-serif;
+    color: red;
+}
+
+/* CSS class selector */
+.dinner {
+    background-color: orange;
+}
+
+.desert {
+    background-color: rgb(226, 64, 194);
+}
+
+/* if we select the parets sometimes the children will be affeted */
+#Foods {
+    font-family: "comic sans MS", sans-serif;
+}
+
+h3 {
+    font-style: italic;
+    color: blue;
+}
+
+/* h3 font size on single h3 instead of both idk */
+#Meme {
+    font-size: 27px;
+}

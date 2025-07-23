@@ -1,0 +1,23 @@
+body {
+    background-color: darkmagenta;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 400px;
+    width: 500px;
+    background-color: blanchedalmond;
+    object-fit: cover;
+    /* object-position: right; */
+}
+
+/* 
+cover
+contain
+none
+fill - defult
+ */

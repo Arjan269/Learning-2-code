@@ -1,0 +1,58 @@
+/* use universal Selector to set up global styling*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px dotted grey;
+  /* apply to all element include body */
+}
+
+/* remove the margin for body */
+body {
+    margin: 0;
+}
+
+div {
+  width: 300px;
+  height: 100px;
+  background-color: hotpink;
+}
+
+/* content-box: (default)
+
+  When you set the width or height of an element, it only includes the content.
+  Padding and border are added on top of the original width and height 
+
+  the total width: 350px
+
+    300px (content)
+  + 20px (padding-left)
+  + 20px (padding-right)
+  + 5px (border-left)
+  + 5px (border-right)
+*/
+.content-box {
+  background-color: aqua;
+  /* box-sizing: content-box; */
+  border: 10px solid orange;
+  padding: 20px;
+}
+
+/* border-box: 
+  When you set the width or height of an element,it includes content,padding,and border.
+  The padding and border are inside the width/height you specify (300px) 
+
+  the total width: 300px
+
+    250px (content)
+  + 20px (padding-left)
+  + 20px (padding-right)
+  + 5px (border-left)
+  + 5px (border-right)
+*/
+.border-box {
+  background-color: pink;
+  box-sizing: border-box;
+  border: 5px solid black;
+  padding: 20px;
+}
+ 

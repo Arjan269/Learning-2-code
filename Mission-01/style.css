@@ -1,0 +1,386 @@
+:root {
+     --text-color: #d3d3d3;
+    --link-color: #4a76ee;
+    --background-color: #1a1c20;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body  {
+  padding: 25px;
+  background: url(img/op\ world\ map.jpeg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position-x: right;
+}
+
+fieldset {
+    border: transparent;
+    padding: 50px;
+}
+
+legend {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 30px;
+}
+
+input{
+    width: 40%;
+}
+
+label {
+    font-family: tahoma, sans-serif;
+    color: var(--text-color);
+}
+
+input[name="name"], input[name="email"] {
+    background-color: transparent;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 2px 2px;
+    margin: 8px 0;
+    border: none;
+    border: 1px solid #777777;
+}
+
+input[type="radio"] {
+    width: 20px;
+}
+
+textarea {
+    border-color: #777777;
+    resize: none;
+    height: 200px;
+    width: 400px;
+}
+
+::placeholder {
+  color: #c7c7c7;
+  opacity: 1; 
+}
+
+input[type="submit"] {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 30%;
+    border-radius: 10px;
+}
+
+#message {
+    background-color: transparent;
+}
+
+/* NAVBAR */
+/* initailly struggled with getting everything adjusted the way i wanted and used w3schools to help understand abit more */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+
+/* Left sideof NAVBAR section */
+nav .left {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+nav .left a {
+    color: var(--text-color);
+    text-shadow: 5px 5px 10px var(--background-color);
+    font-family: tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .left a:hover {
+    color: var(--background-color);
+    text-shadow: 5px 5px 10px var(--text-color);
+}
+
+/* Right side of NAVBAR section */
+nav .right a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--background-color);
+    text-shadow: 5px 5px 10px var(--text-color);
+}
+
+nav .right a:hover {
+    text-shadow: 5px 5px 10px var(--text-color);
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+    color: var(--text-color);
+}
+
+nav .right a span:hover {
+    filter: brightness(.9);
+    color: var(--background-color);
+    text-shadow: 5px 5px 10px var(--text-color);
+}
+
+nav .right a:last-child :hover {
+     text-shadow: 5px 5px 10px var(--text-color);
+}
+
+/* Section 1: Hero */
+.hero-section {
+  padding: 0 50px;
+  margin: 50px 0;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.hero-section .text {
+    color: var(--text-color);
+    text-shadow: 5px 5px 10px var(--background-color);
+}
+
+.hero-section .text h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section .text h1 span {
+    margin: 0 5px;
+}
+
+.hero-section .text p {
+    display: flex;
+    justify-content: center;
+}
+
+/* was usin but when i further changed code it messed with a single hover but not the others so ive commented it out */
+/* .fa-solid {
+    color: var(--background-color);
+    text-shadow: 5px 5px 10px var(--text-color);
+}
+
+.fa-solid:hover {
+    color: var(--text-color);
+    text-shadow: 5px 5px 10px var(--background-color);
+} */
+
+.hero-section .text p span{
+    color: var(--background-color);
+    text-shadow: 5px 5px 10px var(--text-color);
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+.hero-section a{
+    color: var(--text-color);
+    text-shadow: 5px 5px 10px var(--background-color);
+    text-decoration: none;
+    padding: 5px;
+}
+
+.hero-section a:hover {
+    color: var(--background-color);
+    text-shadow: 5px 5px 10px var(--text-color);
+}
+
+.hero-section .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .headshot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section 2: Skills */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    color: var(--text-color);
+    text-shadow: 5px 5px 10px var(--background-color);
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section 3: Crew Comments */
+.crew-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    color: var(--text-color);
+    text-shadow: 5px 5px 10px var(--background-color);
+}
+
+.crew-section h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.crew-section .group .person-details {
+    text-align: center;
+    flex: 2;
+}
+
+.crew-section .group .person-details img{
+    object-fit: cover;
+    width: 250px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.crew-section .group .person-details p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.crew-section .group .person-details p:last-child {
+    font-weight: normal;
+}
+
+.crew-section .group .text {
+    flex: 8;
+}
+
+
+/* skills image section */
+img {
+width: 40%;
+height: 40%;
+padding: 0 ;
+margin: 0;
+margin-top: 10px;
+}
+
+
+
+/* Section 4: Grandline mail aka gmail 😜 */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Home Button/ Back to top*/
+.scroll-arrow {
+    font-size: 16px;
+    font-family: 'poppins' sans-serif;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: .1s;
+}
+
+/*text styling for home button*/
+#scroll-text{
+  color: white;
+  position: fixed;
+  left: 30px;
+  bottom: 33px;
+  font-size: 19px;
+  z-index: 10;
+  text-shadow: 2px 2px 10px var(--link-color);
+  font-family: poppins, sans-serif;
+  font-weight: bold;
+}
+
+#scroll-text:hover {
+    color: var(--link-color);
+    text-shadow: 2px 2px 10px black;
+}    
+
+/* when screen width is 768px or less */
+@media screen and (max-width:768px) {
+body{
+        background-position-y: top;
+        background-position-x: right;
+        
+    }
+}
+
+.navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Section 3: Crew Comments */
+    .crew-section {
+        text-align: center;
+    }
+
+    .crew-section .group {
+        flex-direction: column;
+    }
+
+    
+
+/* when screen width is 600px or less */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* nav .right a {
+        font-size: 22px;
+    } */
+
+    nav .right a span {
+        display: none;
+    }
+
+
+    /* Section 3: Crew Comments */
+.crew-section {
+    padding: 0 20px;
+}
+
+/* Section 4: Contact */
+/* textarea {
+    resize: none;
+    height: 200px;
+    width: 400px;
+} */
+
+}

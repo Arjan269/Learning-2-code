@@ -1,0 +1,61 @@
+:root {
+      --text-color: #eeeff1;
+    --link-color: #4a76ee;
+    --background-color: #1a1c20;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+fieldset {
+    border: 1px solid var(--link-color);
+}
+
+legend {
+    color: var(--text-color);
+}
+
+input{
+    width: 40%;
+}
+
+label {
+    font-family: tahoma, sans-serif;
+    color: var(--text-color);
+}
+
+input[name="name"], input[name="email"] {
+    background-color: var(--background-color);
+}
+
+input[type="text"], input[type="email"] {
+    color: var(--text-color);
+    padding: 2px 2px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid var(--link-color);
+}
+
+input[type="radio"] {
+    width: 20px;
+}
+
+input[type="radio"] + label {
+    color: var(--link-color);
+}
+
+textarea {
+    border: 2px solid var(--link-color)
+}
+
+input[type="submit"] {
+    background-color: var(--link-color);
+    color: var(--text-color);
+    width: 30%;
+}
+
+#message {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
