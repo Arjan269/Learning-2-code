@@ -36,7 +36,15 @@ fieldset {
 legend {
     color: var(--text-color);
     font-weight: 600;
-    font-size: 30px;
+    font-size: 30px; 
+}
+
+.legend {
+  color: rgb(237, 145, 145)red;
+  animation-name: colour-changer;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 input{
@@ -177,6 +185,11 @@ nav .right a:last-child :hover {
 
 .hero-section .text h1 span {
     margin: 0 5px;
+    color: rgb(237, 145, 145)red;
+    animation-name: colour-changer;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .hero-section .text p {
@@ -284,7 +297,6 @@ nav .right a:last-child :hover {
     flex: 8;
 }
 
-
 /* skills image section */
 img {
 width: 40%;
@@ -293,8 +305,6 @@ padding: 0 ;
 margin: 0;
 margin-top: 10px;
 }
-
-
 
 /* Section 4: Grandline mail aka gmail 😜 */
 .contact-section {
@@ -332,6 +342,14 @@ margin-top: 10px;
     text-shadow: 2px 2px 10px black;
 }    
 
+@keyframes colour-changer {
+  0%   {color: rgb(237, 145, 211);}
+  25%  {color: rgb(80, 230, 195);}
+  50%  {color: rgb(246, 244, 178);}
+  100% {color: rgb(178, 218, 246);}
+}
+
+
 /* when screen width is 768px or less */
 @media screen and (max-width:768px) {
 body{
@@ -353,8 +371,6 @@ body{
     .crew-section .group {
         flex-direction: column;
     }
-
-    
 
 /* when screen width is 600px or less */
 @media screen and (max-width: 600px) {
@@ -378,7 +394,6 @@ body{
     nav .right a span {
         display: none;
     }
-
 
     /* Section 3: Crew Comments */
 .crew-section {
