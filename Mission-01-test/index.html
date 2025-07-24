@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- connecting css file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome library for icons -->
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+     <!-- webpage title -->
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <div id="scroll-top"></div>
+        <nav>
+           <div class="left">
+            <a href="http://127.0.0.1:5500/Mission-01" target="_blank">Arjan Petera</a>
+           </div>
+
+           <div class="right">
+            <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+            </a>
+
+            <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>Linkedin</span>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube fa-xl"></i>
+                <span>Youtube</span>
+            </a>
+
+            <a href="mailto: arjanp@missionreadyhq.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+           </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="hero-section">
+        <div class="text">
+            <h2>Hi, I'm <span>Arjan<span></span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt a libero dolorum, obcaecati suscipit quaerat labore harum ad, accusamus, laboriosam quas vitae recusandae alias corporis! Minima ipsam optio praesentium commodi ab quas error blanditiis provident eligendi officiis. Dolore blanditiis harum neque numquam asperiores, ratione ad saepe, assumenda rem iusto illum.</p>
+
+            <div class="links">
+                <a href="#skills">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Skills</span>
+                </a>
+
+                <a href="#testimony">
+                    <i class="fa-solid fa-pen"></i>
+                    <span>testimony</span>
+                </a>
+
+                <a href="#contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Mail</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="headshot">
+            <img src="img/Eso Character.PNG" alt="Arjan">
+        </div>
+
+        </section>
+
+        <!-- Section 2: Skills -->
+         <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur voluptatibus cum suscipit maiores exercitationem totam consequuntur illum quidem possimus beatae.</div>
+
+            <div class="cells">
+                <div class="cell"><img src="Img/html-logo.webp" alt=""><span>HTML</span></div>
+
+                <div class="cell"><img src="Img/css-logo.webp" alt=""><span>CSS</span></div>
+
+                <div class="cell"><img src="Img/javascript-logo.webp" alt=""><span>JavaScript</span></div>
+
+                <div class="cell"><img src="Img/react-logo.webp" alt=""><span>React</span></div>
+
+            </div>
+         </section>
+
+         <!-- Section 3: Testimony -->
+         <section id="testimony" class="testimony-section">
+            <h2>Testimony</h2>
+            <div class="group">
+                <div class="person-details"><img src="Img/DBS custom chr.jpeg" alt="DBS Char">
+                <p>John Doe</p>
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolores illo nesciunt accusamus nam animi neque amet impedit tempore, assumenda molestiae itaque consequatur unde velit illum id non? Nam iusto incidunt temporibus a fuga adipisci quidem at nesciunt unde aperiam? Magni dignissimos culpa nostrum adipisci facilis ex optio animi unde!
+                </div>
+            </div>
+         </section>
+
+         <!-- Section 4: Contact  -->
+          <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+
+            <div class="group">
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, pariatur velit alias, dolor consectetur impedit maiores quam ratione, odio deserunt beatae at doloremque dolorem incidunt totam harum praesentium! Quos hic natus culpa illo vero voluptatibus illum itaque. Excepturi aliquam laboriosam eaque! Inventore officia non cum aperiam ullam veritatis suscipit accusantium.</div>
+
+    
+        <form action="mailto:arjanp@missionreadyhq.com" method="post" autocomplete="on" >
+            <fieldset>
+                <legend>Contact Me:</legend>
+
+                <!-- First input field -->                
+                <label>Name:</label>
+                <input type="text" name="name" required placeholder="First and last name..."/>    
+                <br />
+               
+                
+                <!-- Second input field -->      
+                <label for="">Email:</label>   
+                <input type="email" name="email" required placeholder="email@example.com" />      
+                <br />
+                
+
+                <!-- Radio Buttons-->
+                <label>Subject:</label><br />
+                <input type="radio" id="sales" name="subject" value="sales"><label for="sales">Sales</label><br />
+
+                <input type="radio" id="support" name="subject" value="support"><label for="support">Support</label><br />
+
+                <input type="radio" id="other" name="subject" value="other"><label for="other">Other</label><br />
+                    
+                <!-- Text Area -->
+                <label for="">Message:</label><br />
+                    
+                <textarea name="message" id="message" placeholder="Please enter your message here..."></textarea><br />
+
+                <!-- Submit button -->
+              <button type="submit">Send Message</button>
+            </fieldset> 
+
+        </form>
+            </div>
+          </section>
+        </main>
+    <footer>
+        <a href="#scroll-top">
+            <div class="scroll-arrow"></div>
+            <div id="scroll-text">Home</div>
+        </a>
+    </footer>
+</body>
+</html>
