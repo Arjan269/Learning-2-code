@@ -197,17 +197,6 @@ nav .right a:last-child :hover {
     justify-content: center;
 }
 
-/* was usin but when i further changed code it messed with a single hover but not the others so ive commented it out */
-/* .fa-solid {
-    color: var(--background-color);
-    text-shadow: 5px 5px 10px var(--text-color);
-}
-
-.fa-solid:hover {
-    color: var(--text-color);
-    text-shadow: 5px 5px 10px var(--background-color);
-} */
-
 .hero-section .text p span{
     color: var(--background-color);
     text-shadow: 5px 5px 10px var(--text-color);
