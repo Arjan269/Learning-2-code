@@ -22,3 +22,17 @@ case grade >= 0  &&  grade <= 59:
 default:
     console.log("Invaild Grade");
 };
+
+console.log("==== Homework 2 ====");
+let sum = 0
+const favNum = {
+    num1: 12,
+    num2: 19,
+    num3: 31
+};
+
+for (const num in favNum) {
+    console.log(favNum[num]);
+    sum = sum + favNum[num];
+    console.log(sum);
+};
