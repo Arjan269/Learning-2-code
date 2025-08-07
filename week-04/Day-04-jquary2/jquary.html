@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JQuery</title>
+    
+    <style>
+        body {
+            background-color: rgb(52, 52, 52);
+            color: rgb(251, 253, 255);
+            font-family: Tahoma;
+        }
+
+        button {
+            border-radius: 50px;
+            padding: 10px 20px;
+            background-color: rgb(74, 74, 74);
+            border: 2px solid white;
+            color: white;
+        }
+    </style>
+    
+
+    <!-- ======= Link to jQuery ======= -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- ========= jQuery Code ========= -->
+    <script>
+      $(document).ready(function () {
+        
+        $("button").click(function () {
+
+          alert("Old HTML: " + $("#test").html());
+          // => pop up alert, and shows "Old HTML:" id-test's html
+
+          $("#test").html("<h5>Hello World</h5>");
+          // => id-test's html will become Hello world
+
+          $("#test").css("background","deeppink");
+          
+          console.log("hey")
+
+        //   If changing multiple css properties
+          $("#test").css({
+            color: "blue",
+            backgroundColor: "yellow",
+            fontFamily: "Comic Sans MS",
+            textAlign: "center",
+            fontSize: "50px"
+          });
+
+          $(".paragraphs").css("color", "red");
+        });
+        
+        
+      });
+    </script>
+
+  </head>
+  <body>
+    <h2 id="test">This is the Heading that will change</h2>
+    <button>Click me to set heading</button>
+
+    <p class="paragraphs">Will these all change</p>
+    <p class="paragraphs">Will these all change</p>
+    <p class="paragraphs">Will these all change</p>
+  </body>
+</html>
