@@ -4,10 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>One Piece TCG</title>
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <!-- NAVBAR Section -->
+            <div class="head-left">
+                <img src="img/one_pieoce.png" alt="logo">
+                <button>Products</button>
+            </div>
+
+            <div class="head-right">
+                <p><a href="#">Nexus</a></p>
+                <p><a href="#">Vault</a></p>
+                <p><a href="#">About</a></p>
+                <p><a href="#">services</a></p>
+                <p><a href="#">contact</a></p>
+            </div>
+        </header>
+
+        <!-- HERO Section -->
+         <section class="hero-section">
+            <div class="hero-vid">
+                <video loop autoplay muted plays-inline class=" hero-video">
+                    <source src="video/luffy-vs-kaido.mp4" type="video/mp4">
+                </video>
+
+                <div class="hero-info">
+                    <h1>REDEFINE</h1>
+                    <p>Join the One PIece Trading Card. Scene</p>
+                    <button>Watch Gameplay</button>
+                </div>
+
+                <h1 class="gaming-text"> Card Game</h1>
+                <button class="next-btn">Next</button>
+            </div>
+         </section>
+
+         <!-- About Section -->
+          <section class="about-section">
+            <p>Welcome to The Unofficial One Piece TCG Page</p>
+            <h1>DISCOVER THE NEW WORLD!!</h1>
+
+            <div class="image-box">
+                <img class="image1" src="img/One-piece-tcg-starting-banner_1.jpg" alt="about-img">
+            </div>
+            <h4>ONE PIECE CARD GAME is a collectible card game themed on the world of ONE PIECE!</h4>
+            <h5>In addition to familiar illustrations from the anime and manga, there are many original illustrations drawn by various artists that have never been seen before!</h5>
+        </section>
+
+        <!-- Info Section -->
+         <section. class="info-section">
+            <h3>Get Into The Game Today</h3>
+            <p>Once you’ve collected lots of cards you can make your own special crew (deck) for card battles!</p>
+
+            <div class="info-card">
+                <div class="slider">
+                    <div id="slides">
+                        <img class="slide" src="img/OP05-119_p8.png" alt="card4-1">
+                        <img class="slide" src="img/OP06-118_r1.png" alt="card4-2">
+                        <img class="slide" src="img/OP05-119_p6.png" alt="card4-3">
+                        <img class="slide" src="img/OP09-004_p2.png" alt="card4-4">
+                        <img class="slide" src="img/OP09-118_p2.png" alt="card4-5">
+                    </div>
+
+                        <button class="prev" onclick="prevSlide()">&#10094</button>
+                        <button class="nxt" onclick="nxtSlide()">&#10095</button> 
+                </div> 
+
+                <div class="card">Booster boxes</div>
+                <p>booster boxes my gee</p>
+
+                <img src="img/One Piece TCG Booster Box [OP-11] - A Fist of Divine Speed.webp" alt="card1">
+
+                <div class="card">Starter Decks</div>
+                <p>starter decks my gee</p>
+
+                <img src="img/One Piece TCG- ST 23-28 Starter Deck Bundle.webp" alt="card2">
+
+                <div class="card">Anniversary Sets</div>
+                <p>Anniversary sets my gee</p>
+
+                <img src="img/One Piece TCG- Japanese 1st Anniversary Set.webp" alt="card3">
+
+                <div class="card">Rules</div>
+                <p>Clik the image to follow the link to rules about the game</p>
+
+                <a href="https://en.onepiece-cardgame.com/rules/" target="_blank"><img src="img/rules.jpg" alt="card5"></a> 
+            </div>
+         </section>
+    </div>
 </body>
 </html>
