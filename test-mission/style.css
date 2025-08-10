@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+.carousel-container {
+  width: 400px;
+  height: 300px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 1s;
+}
+
+.slide {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* or use 'cover' if you want cropping */
+  border-radius: 10px;
+}
+
+     /* Position 5 slides in a circle */
+    .slide:nth-child(1) { transform: rotateY(0deg) translateZ(500px); }
+    .slide:nth-child(2) { transform: rotateY(72deg) translateZ(500px); }
+    .slide:nth-child(3) { transform: rotateY(144deg) translateZ(500px); }
+    .slide:nth-child(4) { transform: rotateY(216deg) translateZ(500px); }
+    .slide:nth-child(5) { transform: rotateY(288deg) translateZ(500px); }
+
+ .buttons {
+      margin-top: 20px;
+    }
+
+button {
+      background: #222;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }    
+
+button:hover {
+      background: #555;
+    }    
