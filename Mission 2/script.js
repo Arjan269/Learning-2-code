@@ -1,5 +1,6 @@
 console.log(`Jarvis Initiate Connection`);
 
+// ==== Her Section ==== //
 const nextButton = document.querySelector('.next-btn');
 const video = document.querySelector('.hero-video');
 
@@ -15,3 +16,37 @@ nextButton.addEventListener('click', function(){
         index = -1;
     }
 });
+
+// ==== Info Section ==== //
+  const radios = document.querySelectorAll('input[name="position"]');
+  const slides = document.getElementById('slides');
+  const totalSlides = radios.length;
+  let currentIndex = 0;
+
+  function updateCarousel(position) {
+    slides.style.setProperty('--position', position);
+  }
+
+  // Set initial position
+  updateCarousel(1);
+
+  // Auto cycle function
+  function cycleSlides() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    radios[currentIndex].checked = true;
+    updateCarousel(currentIndex + 1);
+  }
+
+  // Set interval to cycle every 3 seconds
+  let interval = setInterval(cycleSlides, 3000);
+
+  // Listen for user manual click on radios
+  radios.forEach((radio, index) => {
+    radio.addEventListener('click', () => {
+      clearInterval(interval); // Stop auto cycling temporarily
+      currentIndex = index;
+      updateCarousel(index + 1);
+      // Restart auto cycling after user interaction
+      interval = setInterval(cycleSlides, 3000);
+    });
+  });

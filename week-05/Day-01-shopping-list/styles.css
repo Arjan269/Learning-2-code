@@ -114,4 +114,72 @@ hr {
     }
 }
 
- 
+
+/* Own section */
+  .comment-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.comment-section h2 {
+  margin-bottom: 15px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* space between form items */
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.comment-form button {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.comment-form button:hover {
+  background: #555;
+}
+
+#comments {
+  margin-top: 20px;
+}
+
+.comment {
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.comment strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc; /* Optional: remove if you want no border */
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: transparent; /* 🔍 This makes it transparent */
+  color: #ccc; /* or #fff depending on background */
+  resize: vertical; /* Optional: allows vertical resizing */
+}

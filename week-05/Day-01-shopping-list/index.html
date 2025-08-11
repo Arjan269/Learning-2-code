@@ -21,13 +21,46 @@
         <form>
             <input type="text" placeholder="Item. e.g tomatoes" id="item"/> x
             <input type="text" placeholder="Quantity. e.g 1" id="quantity"/>
-            <button id="bigger-btn">Add to list</button>
-            <button id="smaller-btn">+</button>
+            <button onclick="addItem(event)" id="bigger-btn">Add to list</button>
+            <button onclick="addItem(event)"  id="smaller-btn">+</button>
         </form>
 
         <!-- Where the items will end up displaying -->
-        <p id="shopping-list-display"></p>
+        <div id="shopping-list-display"></div>
+
+        <hr>
+    
+        <!-- ==================== -->
+         <!--   Shopping Basket   -->
+        <!-- ==================== -->
+    <div id="shopping-basket-container">
+        <h1>SHOPPIN BASKET</h1>
+        <p>Enter all theproducts yo've put into your shopping basket, seprated by commas, to see if you have forgotten anything</p>
     </div>
 
+    <!-- FORM -->
+     <form>
+        <input type="text"      id="shopping-baskt" placeholder="e. g. tomatoes,eggs,milk">
+        <button onclick="addToBasket(event)">Put item in basket</button>
+     </form>
+
+     <!-- where the item will display -->
+      <div id="item-still-to-buy-display"></div>
+    </div>
+
+
+    <!-- Own Section ^-^ -->
+<div class="comment-section">
+  <h2>Leave a Comment</h2>
+
+  <form class="comment-form" id="commentForm">
+    <input type="text" id="username" placeholder="Your Name" required />
+    <textarea id="commentText" rows="4" placeholder="Your Comment" required></textarea>
+    <button type="submit">Post Comment</button>
+  </form>
+
+  <div id="comments"></div>
+</div>   
+</div>
 </body>
 </html>

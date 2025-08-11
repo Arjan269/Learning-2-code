@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>One Piece TCG</title>
     <script src="script.js" defer></script>
 </head>
@@ -17,11 +18,11 @@
             </div>
 
             <div class="head-right">
-                <p><a href="#">Nexus</a></p>
-                <p><a href="#">Vault</a></p>
-                <p><a href="#">About</a></p>
-                <p><a href="#">services</a></p>
-                <p><a href="#">contact</a></p>
+                <p><a href="https://en.onepiece-cardgame.com/" target="_blank">One Piece TCG</a></p>
+                <p><a href="https://tcgcollectornz.com/collections/one-piece-singles-tcg-collector-nz?srsltid=AfmBOorh6qKIwMfxyaZlpyNtCr5yeGDN5NC1-7lVeAxheQc1Cs7hGtgh" target="_blank">Vault</a></p>
+                <p><a href="#about-section">About</a></p>
+                <p><a href="#info-section">services</a></p>
+                <p><a href="#contact-section">contact</a></p>
             </div>
         </header>
 
@@ -44,7 +45,7 @@
          </section>
 
          <!-- About Section -->
-          <section class="about-section">
+          <section id="about-section" class="about-section">
             <p>Welcome to The Unofficial One Piece TCG Page</p>
             <h1>DISCOVER THE NEW WORLD!!</h1>
 
@@ -56,49 +57,87 @@
         </section>
 
         <!-- Info Section -->
-         <section. class="info-section">
+         <section id="info-section" class="info-section">
             <h3>Get Into The Game Today</h3>
             <p>Once you’ve collected lots of cards you can make your own special crew (deck) for card battles!</p>
 
+            <div class="card-1">
+                     <a href="https://tcgcollectornz.com/collections/one-piece-singles-tcg-collector-nz?srsltid=AfmBOorh6qKIwMfxyaZlpyNtCr5yeGDN5NC1-7lVeAxheQc1Cs7hGtgh" target="_blank"><h1 class="singles">Singles</h1></a>
+                    <p class="p">Can't pull that card you want buy indevidual cards you're after</p>
+                    <div class="slider">
+                        <main id="slides">
+
+                            <div class="slide"><img src="img/OP05-119_p8.png" alt="card4-1"></div>
+                            <div class="slide"><img src="img/OP06-118_r1.png" alt="card4-2"></div>
+                            <div class="slide"><img src="img/OP05-119_p6.png" alt="card4-3"></div>
+                            <div class="slide"><img src="img/OP09-004_p2.png" alt="card4-4"></div>
+                            <div class="slide"><img src="img/OP09-118_p2.png" alt="card4-5"></div>
+                        </main>
+                  
+                    <!-- Controls container -->
+                        <div class="controls">
+                            <input type="radio" name="position" data-index="1">
+                            <input type="radio" name="position" data-index="2">
+                            <input type="radio" name="position" data-index="3" checked>
+                            <input type="radio" name="position" data-index="4">
+                            <input type="radio" name="position" data-index="5">
+                            </div>
+                        </div>
+                    </div>
+
             <div class="info-card">
-                <div class="slider">
 
-                    <input onclick="nxtSlide" type="radio" name="position">
-                    <input onclick="nxtSlide" type="radio" name="position">
-                    <input onclick="nxtSlide" type="radio" name="position" checked>
-                    <input onclick="nxtSlide" type="radio" name="position">
-                    <input onclick="nxtSlide" type="radio" name="position">
-                    
-                    <main id="slides">
-                        <div class="slide" ><img src="img/OP05-119_p8.png" alt="card4-1"></div>
-                        <div class="slide" ><img src="img/OP06-118_r1.png" alt="card4-2"></div>
-                        <div class="slide" ><img src="img/OP05-119_p6.png" alt="card4-3"></div>
-                        <div class="slide" ><img src="img/OP09-004_p2.png" alt="card4-4"></div>
-                        <div class="slide" ><img src="img/OP09-118_p2.png" alt="card4-5"></div>
-                    </main>
-                </div> 
+                <div class="card">
+                    <h1>Booster boxes</h1>
+                
+                    <p>booster boxes my gee</p>
 
-                <div class="card">Booster boxes</div>
-                <p>booster boxes my gee</p>
+                    <a href="https://cardmerchant.co.nz/collections/one-piece-in-stock/products/one-piece-tcg-booster-box-op-11-a-fist-of-divine-speed" target="_blank"><img src="img/One Piece TCG Booster Box [OP-11] - A Fist of Divine Speed.webp" alt="card1"></a>
+                </div>
 
-                <img src="img/One Piece TCG Booster Box [OP-11] - A Fist of Divine Speed.webp" alt="card1">
+                <div class="card">
+                    <h1>Starter Decks</h1>
+                    <p>starter decks my gee</p>
 
-                <div class="card">Starter Decks</div>
-                <p>starter decks my gee</p>
+                    <a href="https://wpgames.co.nz/products/one-piece-tcg-st-23-28-starter-deck-bundle" target="_blank"><img src="img/One Piece TCG- ST 23-28 Starter Deck Bundle.webp" alt="card2"></a>
+                </div>
 
-                <img src="img/One Piece TCG- ST 23-28 Starter Deck Bundle.webp" alt="card2">
+                <div class="card">
+                    <h1>Anniversary Sets</h1>
+                    <p>Anniversary sets my gee</p>
 
-                <div class="card">Anniversary Sets</div>
-                <p>Anniversary sets my gee</p>
+                    <a href="https://wpgames.co.nz/products/one-piece-tcg-japanese-1st-anniversary-set" target="_blank"><img src="img/One Piece TCG- Japanese 1st Anniversary Set.webp" alt="card3"></a>
+                </div>
 
-                <img src="img/One Piece TCG- Japanese 1st Anniversary Set.webp" alt="card3">
+                <div class="card">
+                    <h1>Rules</h1>
+                    <p>Clik the image to follow the link to rules about the game</p>
 
-                <div class="card">Rules</div>
-                <p>Clik the image to follow the link to rules about the game</p>
-
-                <a href="https://en.onepiece-cardgame.com/rules/" target="_blank"><img src="img/rules.jpg" alt="card5"></a> 
+                    <a href="https://en.onepiece-cardgame.com/rules/" target="_blank"><img src="img/rules.jpg" alt="card5"></a> 
+                </div>
             </div>
          </section>
+
+         <!-- Contact Section -->
+          <section class="contact-section">
+            <p>Join Thousands of players</p>
+            <h1>LET'S CONQUER THE NEW WORLD TOGETHER</h1>
+            <button>CONTACT US</button>
+            <img class="cards-1" src="img/CARDS-1.png" alt="contact-img">
+            <img class="cards-2" src="img/CARDS-2.png" alt="contact-img">
+            <img class="cards-3" src="img/CARDS-3.jpeg" alt="contact-img">
+          </section>
+
+          <section class="footer">
+            <p>©Arjan 2025. All rights reserved</p>
+            <ul>
+                <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://nz.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+            <p>Privacy Policy</p>
+          </section>
     </div>
 </body>
 </html>
