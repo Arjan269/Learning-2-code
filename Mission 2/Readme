@@ -1,0 +1,104 @@
+// ==== HERO SECTION JavaScript ==== //
+
+"This JavaScript adds interactivity to the hero section of my website. When a user clicks the 'Next' button, it switches to a new video using an array of video sources. I used querySelector() to target the elements, an event listener for the click, and a variable to keep track of which video is currently shown. The code also includes logic to loop the video back to the start if you reach the end but I only have one video so it’s essentially a stop and restart button at the moment.”
+
+More In-depth If needed (
+
+HTMl Element Selector
+(  const nextButton = document.querySelector('.next-btn');
+   const video = document.querySelector('.hero-video');  )
+* Finds the "Next" button on the page so JavaScript can listen for clicks.
+* Gets the video element so JavaScript can change what video is playing.
+
+Create a list of video file(s):
+(  const movieList = ['video/luffy-vs-kaido.mp4'];  )
+
+What it does:
+* This array (a list) of video files is the videos I want to play.
+* Right now it only has one video, but I intend add more later if I work on this again: 
+(Example)
+(  const movieList = ['video1.mp4', 'video2.mp4', 'video3.mp4'];  )
+
+Set up a starting point:
+
+(  let index = 0;  )
+
+What it does:
+* This keeps track of which video is currently showing.
+* Starts at 0, which is the first video in the list.
+
+Adding a click event to the "Next" button:
+
+What it does:
+* When the button is clicked:
+    1. index += 1 → Goes to the next video in the list.
+    2. video.src = movieList[index] → Updates the video to the new one.
+    3. The if (index === 1) check:
+        * Since there's only 1 video in the list, once index reaches 1 (which would break things), it resets index to -1.
+        * So that the next click sets it back to 0, making the video loop.
+        * Having more videos is more functional but I didn’t want t waste to much time finding resources for html.
+)
+
+// ==== ABOUT SECTION JavaScript ==== //
+
+This JavaScript adds a scroll-based animation to my website. It checks when an image with the class .autoTakeFull is mostly visible on the screen (at least 70%). When it is, it adds an active class to the image and its parent, which triggers a CSS animation. When the image scrolls out of view, the active class is removed so the animation can reset. I used querySelector() to select the image, and IntersectionObserver to track its visibility as the user scrolls.
+
+More In-depth If needed (  
+
+I use the document.eventlistener to ensures the code runs only after the HTML content is fully loaded.
+DOMContentLoaded is an event that fires when the DOM is ready, but before images, stylesheets, etc., are fully loaded.  
+
+(Example)
+(  const image = document.querySelector(".autoTakeFull");  )
+This selects the first element with the class autoTakeFull and stores it in the variable image.
+
+Here, a new IntersectionObserver is created to watch when the image enters or leaves the viewport.
+The callback function receives an array of entries, but only the first entry is used (that's why [entry] is unpacked from the array).
+
+The if entry is true when the image is currently visible in the viewport (based on the threshold).
+
+If the image is visible, it and its parent element are both given the active class.
+This is used to trigger the CSS animations.
+
+The Else is use so if the image is not visible enough, the active class is removed from both the image and its parent.
+This is used to reverse animations/hide the image again.
+
+The threshold is the options object for the observer.
+threshold: 0.7 means the callback will run when at least 70% of the image is visible on the screen.
+
+The observer tells the IntersectionObserver to start watching the image element.
+)
+
+
+// ==== INFO SECTION JavaScript ==== //
+
+"This part of my JavaScript controls the slideshow. It starts by showing the first image, and then automatically cycles to the next one every 3 seconds. I used a function called cycleSlides() to handle the cycling, and setInterval() to run that function repeatedly. When a user clicks one of the radio buttons, the slideshow stops temporarily, jumps to that slide, and then restarts the automatic cycle. I used events, loops, and conditionals to make sure everything works smoothly.”
+
+This shows the first slide when the page loads. The updateCarousel() function is used to move the carousel to the correct slide.
+
+More In-depth If needed (
+
+HTMl Element Selector
+* radios: Gets all the radio buttons that switch between slides.
+* slides: Gets the slide container (probably where images or content are shown).
+* totalSlides: Counts how many slides there are (same as how many radio buttons).
+* currentIndex: Keeps track of which slide you're currently on (starts at 0)
+
+function cycleSlides() {...}
+The cycleSlides() function is used to automatically move to the next slide every time it's called.
+* It increases currentIndex by 1.
+* Uses the % (modulo) operator to loop back to the first slide when it reaches the end.
+* It updates the visual radio button (radios[currentIndex].checked = true) and calls the  updateCarousel() to show the new slide.
+
+setInterval(cycleSlides, 3000);
+The cycleSlides() function is set so it runs every 3 seconds. It's what makes the slideshow automatic.
+
+radios.forEach((radio, index) => {...})
+The radio.forEach is used so it adds a click event to each radio button (the little dots below the slideshow that let users choose a slide manually).
+So when a user clicks one:
+1. clearInterval(interval); stops the auto-play temporarily.
+2. It sets currentIndex to the one the user clicked.
+3. Updates the carousel to the right slide.
+4. Then restarts auto-play again with setInterval(). 
+)
+

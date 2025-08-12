@@ -50,3 +50,25 @@ nextButton.addEventListener('click', function(){
       interval = setInterval(cycleSlides, 3000);
     });
   });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const image = document.querySelector(".autoTakeFull");
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        image.classList.add("active");
+        image.parentElement.classList.add("active");  // <-- add here
+      } else {
+        image.classList.remove("active");
+        image.parentElement.classList.remove("active");  // <-- and here
+      }
+    },
+    {
+      threshold: 0.7,
+    }
+  );
+
+  observer.observe(image);
+});
+

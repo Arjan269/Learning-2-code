@@ -62,6 +62,7 @@ header {
     padding-left: 25px;
     color: rgb(81, 81, 81);
     font-size: 15px;
+    padding-right: 10px;
 }
 
 .hero-section {
@@ -180,17 +181,23 @@ header {
     color: white;
 }
 
-.image-box{
-    width: 360px;
-    height: 510px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
+.image-box {
+  width: 360px;
+  height: 510px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  transition: all 0.8s ease;
 }
 
-imag-box img{
+.image-box.active {
+  overflow: visible; /* allow overflow only when active */
+}
+
+.image-box img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -207,7 +214,6 @@ imag-box img{
     max-width: 1150px;
     text-align: center;
     margin: 25px 0;
-    /* can change this to javascript */
     text-transform: uppercase; 
     background: linear-gradient(to right, #4acfee, #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
     background-size: 200%;
@@ -488,7 +494,7 @@ main#slides {
 
 .contact-section .cards-3{
     position: absolute;
-    left: 35%;
+    left: 20%;
     bottom: -5%;
     height: 200px;
     width: 250px;
@@ -531,8 +537,6 @@ main#slides {
     opacity: 0.7;
 }
 
-
-
 /* Footer */
 .footer{
     width: 100%;
@@ -564,17 +568,84 @@ main#slides {
     margin: 0 10px;
 }
 
-/* Take full screen */
-.autoTakeFull{
-    animation: autoTakeFullAnimation both;
-    animation-timeline: view(70% 65%);
+.autoTakeFull {
+  width: 360px;
+  height: 510px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-bottom: 0;
+  transition: width 1s ease, height 1s ease, border-radius 1s ease, margin-bottom 1s ease;
 }
 
-@keyframes autotakeFullAnimation{
-    to{
-        width: 100%;
-        height: 100vh;
-        border-radius: 0;
-        margin-bottom: 100px;
+.autoTakeFull.active {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+  margin-bottom: 100px;
+  overflow: visible;
+}
+
+@media screen and (max-width: 650px){
+    header{
+        padding: 0 10px;
+    }
+    .head-left button{
+        display: none;
+    }
+    .head-right a{
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .hero-info{
+        left: 5%;
+    }
+    .hero-section h1{
+        font-size: 90px;
+    }
+    .next-btn{
+        left: 25%;
+        top: 40%;
+    }
+    .about-section{
+        margin: 0;
+    }
+    .about-section h1{
+        font-size: 50px;
+    }
+    .image-box{
+        width: 300px;
+        height: 500px;
+    }
+    .about-section h4, .about-section h5{
+        max-width: 350px;
+        text-align: center;
+    }
+    .contact-section .cards-1{
+        width: 250px;
+        height: 300px;
+        right: 0;
+        top: -100px;
+    }
+    .contact-section .cards-2{
+        width: 150px;
+        height: 250px;
+        top:120px;
+        left: 1px;
+    }
+    .contact-section .cards-3{
+        left: 10px;
+        bottom: 0px;
+        width: 150px;
+        height: 200px;
+    }
+    .contact-section h1{
+        font-size: 60px;
+        max-width: 300px;
+    }
+    .footer p{
+        display: none;
+    }
+    .footer ul{
+        margin-left: 190px;
     }
 }
