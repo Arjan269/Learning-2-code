@@ -1,6 +1,6 @@
 console.log(`Jarvis Initiate Connection`);
 
-// ==== Her Section ==== //
+// ==== Hero Section ==== //
 const nextButton = document.querySelector('.next-btn');
 const video = document.querySelector('.hero-video');
 
@@ -16,6 +16,9 @@ nextButton.addEventListener('click', function(){
         index = -1;
     }
 });
+
+
+
 
 // ==== Info Section ==== //
   const radios = document.querySelectorAll('input[name="position"]');
@@ -50,6 +53,13 @@ nextButton.addEventListener('click', function(){
       interval = setInterval(cycleSlides, 3000);
     });
   });
+
+
+
+
+
+
+  //  ==== About Section ==== //
 
 document.addEventListener("DOMContentLoaded", () => {
   const image = document.querySelector(".autoTakeFull");

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>“I used JavaScript to build a simple chatbot system. It works by storing a set of questions and answers, and when the user clicks a question, JavaScript shows the matching response and new buttons. I used functions, objects, and event listeners to make it interactive, and updated the page dynamically using the DOM.”</h1>
+
+  <br><br>
+
+  <p>// ==== The Chat Flow ==== //</p>
+  
+  <p>const chatFlow = {
+  start: {
+    message: "Hi! Choose a question below:",
+    options: [
+      "What is this website about?",
+      "How do the cards work?",
+      "What did you use JavaScript for?"
+    ]
+  },
+  ...
+};</p>
+
+<p>📌 This is a JavaScript object that acts like a map for the chatbot.
+Each key (like "start", "What is this website about?") represents a point in the conversation.
+Each value has:
+message: What the bot says.
+options: What the user can click next.
+</p>
+
+<br><br>
+
+<p>// ==== Tracking the current question ==== //</p>
+
+<p>
+  function toggleChat() {
+  const chat = document.getElementById("chatContainer");
+  chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+
+  if (chat.style.display === "flex") {
+    document.getElementById("chatBox").innerHTML = "";
+    showMessage("bot", chatFlow.start.message);
+    showOptions(chatFlow.start.options);
+    currentQuestion = "start";
+  }
+}
+</p>
+
+<p>
+This function opens or closes the chat window. When it opens: It clears old messages. It starts the conversation fresh and It shows the first message and buttons.
+</p>
+
+<br><br>
+
+<p>// ==== When a question is cliked: sendQuestion() ==== //</p>
+
+<p>
+  function sendQuestion(question) {
+  showMessage("user", question);
+
+  if (chatFlow[question]) {
+    const response = chatFlow[question];
+    showMessage("bot", response.message);
+    showOptions(response.options);
+    currentQuestion = question;
+  } else {
+    showMessage("bot", "Sorry, I don't understand that.");
+    showOptions(chatFlow.start.options);
+  }
+}
+</p>
+
+<p>This function: Displays the user’s question in the chat.</p>
+<p>*Looks up the bot’s response from the chatFlow object.</p>
+<p>*Updates the screen with the next message and options.</p>
+<p>*If the question isn’t recognized, it shows an error message.</p>
+
+<br><br>
+
+<p>// ==== Adding messages to the cat box ==== //</p>
+
+<p>
+  function showMessage(type, text) {
+  const chatBox = document.getElementById("chatBox");
+  const message = document.createElement("p");
+  message.className = type;
+  message.innerText = text;
+  chatBox.appendChild(message);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+</p>
+
+<p>This function: Adds a new message to the chat visually. type is either "user" or "bot" — used for styling. It scrolls the chat to the bottom automatically.</p>
+
+<br><br>
+
+<p>// ==== Showing the clickable buttons ==== //</p>
+
+<p>
+  function showOptions(options) {
+  const optionsContainer = document.querySelector(".chat-options");
+  optionsContainer.innerHTML = "";
+
+  options.forEach((opt) => {
+    const btn = document.createElement("button");
+    btn.innerText = opt;
+    btn.onclick = () => sendQuestion(opt);
+    optionsContainer.appendChild(btn);
+  });
+}
+</p>
+
+<p>This function: Clears the old buttons. Creates new buttons based on the available options from chatFlow Each button sends a new question when clicked.</p>
+
+ <div class="chat-container" id="chatContainer">
+  <div class="chat-header">
+    <span>Ask Me Anything</span>
+    <button onclick="toggleChat()">✖</button>
+  </div>
+  <div class="chat-box" id="chatBox">
+    <!-- Chat messages will appear here -->
+  </div>
+  <div class="chat-options">
+    <!-- Question buttons will be inserted here -->
+  </div>
+</div>
+
+<button class="chat-toggle" onclick="toggleChat()">Chat</button>
+
+
+</body>
+</html>
+
