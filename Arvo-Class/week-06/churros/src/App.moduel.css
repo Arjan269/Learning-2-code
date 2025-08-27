@@ -1,0 +1,9 @@
+.bigImage{
+    width: 100%;
+    background-color: red;
+}
+
+.smallImage{
+    width: 10%;
+    background-color: blue;
+}

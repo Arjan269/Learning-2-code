@@ -1,0 +1,10 @@
+.btn {
+    background-color: deepskyblue;
+    color: white;
+    font-weight: 700;
+}
+
+.active {
+    background-color: skyblue;
+    color: rgb(87, 86, 86);
+}

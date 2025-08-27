@@ -1,0 +1,13 @@
+img {
+    width: 50%;
+}
+
+.bg-div {
+    background-image: url("/dog-public.png");
+
+    background-image: url("../assets/cat-src.jpeg");
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center, center;
+}
