@@ -1,0 +1,108 @@
+/* ========= App CSS ======== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1f23;
+  color: rgb(245, 245, 245);
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px rgb(170, 168, 168);
+  border-radius: 5px;
+  width: 400px;
+  margin: 10px auto;
+  padding: 10px 25px;
+}
+
+
+/* ========= Header CSS ========== */
+h1{
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+/* ========= TaskField CSS ========== */
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.form-container input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid 2px rgb(170, 168, 168);
+  color: rgb(245, 245, 245);
+  margin: 10px 0;
+  font-family: inherit;
+  background-color: #292f34;
+}
+
+input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  padding: 8px;
+  background-color: #51575c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* ========= TaskList CSS ========= */
+.task {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: #292f34;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 8px;
+  margin: 6px 0;
+}
+
+.delete-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #7d858c;
+  font-weight: 600;
+  transition: color 0.1s;
+  margin-left: .8rem;
+}
+
+.delete-icon:hover {
+  color: rgb(202, 16, 16);
+}
+
+.edit-icon {
+  background-color: #7d858c;
+  opacity: 0.5;
+  padding: 1px 8px;
+  border-radius: 50px;
+  color: rgb(34, 34, 34);
+  border: none;
+}
+
+.edit-icon:hover {
+  background-color: rgb(35, 139, 230);
+  opacity: 1;
+}
