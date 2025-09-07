@@ -85,4 +85,31 @@ async function badFetch() {
 
 }
 
-badFetch()
+badFetch();
+
+
+// ==== Exercise 3 ==== //
+async function pokeFetch() {
+
+    try{
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon")
+        console.log(response);
+
+        if (response.ok === false) {
+            throw new Error("Gotta catch em all")
+        }
+
+        const result = await response.json();
+        console.log(result);
+
+    } catch (err) {
+        console.log(err);
+        alert(err);
+    } finally {
+        console.log(`Did you catch them all`);
+    }
+
+
+};
+
+pokeFetch();

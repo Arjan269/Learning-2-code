@@ -14,7 +14,7 @@ function myFunctionBringsAllTheBoysToTheYard() {
 //Call the function
 myFunctionBringsAllTheBoysToTheYard();
 
-// ==== Function with paramaters ==== //
+// ==== Function with parameters ==== //
 function callUserName(name, age) {
     console.log(`You clicked ${name} they are ${age} years old.`)
 };
@@ -29,14 +29,14 @@ sum(3, 4);
 
 sum(10, 2);
 
-console.log("==== Excercise 1 ====");
+console.log("==== Exercise 1 ====");
 function showMyBrekkie(food1, food2, food3) {
     console.log(`I had ${food1} and ${food2} for breakfast with a hot ${food3}.`);
 };
 
 showMyBrekkie("Bacon", "eggs", "coffee");
 
-// ==== Retur statement ==== //
+// ==== Return statement ==== //
 console.log("==== Return Statement ====");
 function sumNums(num1, num2) {
     return num1 + num2;
@@ -51,7 +51,7 @@ if (sumResults === 7) {
     {console.log("The answer is wrong");
 };
 
-// functon expression - storing h function into a variable 
+// function expression - storing h function into a variable 
 
 const funcWithParamsExpression = function (num1, num2) {
     return num1 + num2;
@@ -59,7 +59,7 @@ const funcWithParamsExpression = function (num1, num2) {
 
 console.log(funcWithParamsExpression(10, 11));
 
-console.log("==== Excercise 2 ====");
+console.log("==== Exercise 2 ====");
 function isStrEmpty(str) {
     if (str === "") {
         console.log("This string is empty");
@@ -81,7 +81,7 @@ console.log(isStringEmpty(" "));
 
 // Methods - functions in objects
 const person = {
-    firstName: "Johm",
+    firstName: "John",
     lastName: "Doe",
     greetings: function (name) {
         console.log(`Hi ${name}, Nice day for fishing ain't it.`)
@@ -90,7 +90,7 @@ const person = {
 
 person.greetings("Yuji Itadori");
 
-console.log("==== Excercise 3 ====");
+console.log("==== Exercise 3 ====");
 function halfNumber(num) {
     return num / 2
 };
